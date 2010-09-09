@@ -31,10 +31,11 @@
 (defn response-function [map]
   (case (:request-method map)
         :get {:status 200
-              :headers {"Content-Type" (get-stored-type map) 
+              :headers {"Content-Type" (get-stored-type map)
                         "Content-Length" (get-stored-length map)}
               :body (->> map :uri .getBytes (get cask) ByteArrayInputStream.)}
-        :put ((deref (ns-resolve *ns* 'place-for-things.core/four-oh-four)) map)))
+        :put ((deref (ns-resolve *ns* 'place-for-things.core/four-oh-four))
+              map)))
 
 (defn put-helper [map]
   (assoc cask

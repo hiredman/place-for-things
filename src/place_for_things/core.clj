@@ -3,7 +3,8 @@
         [ring.middleware.params :only [wrap-params]]
         [graft.core :only [graft uri->symbol]]
         [amontillado.core :only [cask recover key-table]]
-        [place-for-things.util :only [put-helper get-helper is->bb post-helper]]))
+        [place-for-things.util :only [put-helper get-helper
+                                      is->bb post-helper]]))
 
 (defn four-oh-four [map]
   (case (:request-method map)
