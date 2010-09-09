@@ -4,7 +4,9 @@ FIXME: write description
 
 ## Usage
 
-FIXME: write
+I run this from a checkout of the source with:
+
+java -Dcask.dir=$HOME/tmp/casks -cp src/:lib/\*:lib/dev/\* clojure.main -e "(use 'place-for-things.core)"
 
 ## Installation
 
